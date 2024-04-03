@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Organic Produce Traceability</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Organic Produce Traceability</h1>
+
+        <form id="addProduceForm" class="mt-4">
+            <h2>Add Produce</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="farm">Farm:</label>
+                <input type="text" id="farm" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="harvestDate">Harvest Date:</label>
+                <input type="date" id="harvestDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="isOrganic">Is Organic:</label>
+                <select id="isOrganic" class="form-control" required>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications:</label>
+                <input type="text" id="certifications" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Produce</button>
+        </form>
+
+        <form id="addTransportDataForm" class="mt-4">
+            <h2>Add Transport Data</h2>
+            <div class="form-group">
+                <label for="produceId">Produce ID:</label>
+                <input type="number" id="produceId" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="timestamp">Timestamp:</label>
+                <input type="datetime-local" id="timestamp" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="temperature">Temperature:</label>
+                <input type="text" id="temperature" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity:</label>
+                <input type="text" id="humidity" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Transport Data</button>
+        </form>
+
+        <form id="getProduceForm" class="mt-4">
+            <h2>Get Produce</h2>
+            <div class="form-group">
+                <label for="getProduceId">Produce ID:</label>
+                <input type="number" id="getProduceId" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Produce</button>
+        </form>
+
+        <div id="getProduceResult" class="mt-4"></div>
+
+        <form id="getTransportDataForm" class="mt-4">
+            <h2>Get Transport Data</h2>
+            <div class="form-group">
+                <label for="getTransportDataId">Produce ID:</label>
+                <input type="number" id="getTransportDataId" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Transport Data</button>
+        </form>
+
+        <div id="getTransportDataResult" class="mt-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
